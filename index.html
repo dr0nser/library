@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" href="./images/icons8-books-48-yellow.png" type="image/x-png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="container">
+        <div class="left">
+            <img src="./images/icons8-books-48.png" alt="Library Logo">
+            <p>ibrary</p>
+        </div>
+        <a href="https://github.com/whyucode/library" target="_blank">
+            <img src="./images/icons8-github-60.png" alt="Github Logo">
+        </a>
+    </header>
+    <section id="welcome" class="welcome container">
+        <div class="left">
+            <h1>Welcome to <br> library</h1>
+            <h3>One place to organize all your books</h3>
+            <button class="btn-open-input-window">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" />
+                </svg>
+                <p>Add Book</p>
+            </button>
+        </div>
+        <div class="right">
+            <img src="./images/undraw_education_f8ru.svg" alt="">
+        </div>
+    </section>
+    <section id="books" class="books container">
+        <div class="header">
+            <div class="left">
+                <h3>Your Books</h3>
+            </div>
+            <div class="right">
+                <button class="btn-open-input-window">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" />
+                    </svg>
+                    <p>Add Book</p>
+                </button>
+            </div>
+        </div>
+        <div id="book-grid" class="grid"></div>
+    </section>
+    <div id="overlay" class="overlay"></div>
+    <section id="input-window" class="input">
+        <form action="/index.html" id="form">
+            <h1>Add New Book</h1>
+            <input id="title" name="title" type="text" placeholder="Title of the book" required>
+            <input id="author" name="author" type="text" placeholder="Author of the book" required>
+            <input id="pages" name="pages" type="number" placeholder="Number of pages" required>
+            <label for="read">
+                Have your read it ?
+                <input id="read" name="read" type="checkbox" checked="false">
+            </label>
+            <input onsubmit="handleInput()" id="btn-add-new-book" class="submit" type="submit" value="Submit">
+        </form>
+    </section>
+    <script src="./src/script.js"></script>
+</body>
+</html>
